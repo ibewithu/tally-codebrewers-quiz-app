@@ -1,0 +1,14 @@
+.row{
+    display: flex;
+    flex-direction: row;
+}
+.col{
+    display: flex;
+    flex-direction: column;
+}
+.current-quiz {
+
+}
+.past-quiz {
+    height: 50vh;
+}
