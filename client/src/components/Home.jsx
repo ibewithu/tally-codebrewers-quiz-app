@@ -17,25 +17,29 @@ const Home = () => {
     else {
       async function fetchQuizzes() {
         await axios.get(`/quiz/${cookies.userId}`).then(x=>{
-          let newQuizzes = x.data.map(x=>quizzes.push(x))
+          var newQuizzes = x.data
           setQuizzes(newQuizzes)
-          console.log('upper', quizzes)
         }).catch(x=>{
           console.log(x)
         })
       }
       fetchQuizzes()
     }
-  }, [cookies.userId, navigate])
+  }, [])
+
+  const createQuizHandler = ()=>{
+    navigate('/create-quiz')
+  }
   
   return (
       <div className="row main">
         <div className="col current-quiz">
-          
+          <button onClick={()=>createQuizHandler()}>Create new Quiz</button>
         </div>
         <div className="col past-quiz">
-          <div>abcd</div>
-          { console.log('lower', quizzes)}
+          { quizzes.map(x=>{
+            return <span key={x._id}>{x.title}</span>
+          })}
         </div>
       </div>
   );

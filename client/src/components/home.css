@@ -7,8 +7,10 @@
     flex-direction: column;
 }
 .current-quiz {
-
+    height: 50vh;
+    border: 1px solid grey;
 }
 .past-quiz {
     height: 50vh;
+    border: 1px solid grey;
 }

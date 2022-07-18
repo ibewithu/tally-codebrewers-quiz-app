@@ -5,6 +5,7 @@ import Home from "./components/Home";
 import Navbar from "./components/Navbar";
 import Login from "./components/Login";
 import Register from "./components/Register";
+import CreateQuiz from './components/CreateQuiz';
 function App() {
   return (
     <>
@@ -16,6 +17,7 @@ function App() {
           <Route exact path="/about" element={<About />} />
           <Route exact path="/auth/login" element={<Login />} />
           <Route exact path="/auth/register" element={<Register />} />
+          <Route exact path="/create-quiz" element={<CreateQuiz />} />
         </Routes>
         </div>
       </Router>
