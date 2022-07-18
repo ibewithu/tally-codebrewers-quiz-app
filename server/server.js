@@ -25,10 +25,10 @@ const questionRoute = require("./routes/question")
 const responseRoute = require("./routes/response")
 
 app.use("/auth", authRoute);
-app.use("/users", userRoute);
-app.use("/quizzes", quizRoute);
-app.use("/quizzes", questionRoute);
-app.use("/responses", responseRoute);
+app.use("/user", userRoute);
+app.use("/quiz", quizRoute);
+app.use("/question", questionRoute);
+app.use("/response", responseRoute);
 
 app.listen("5000", () => {
   console.log("Backend is running.");

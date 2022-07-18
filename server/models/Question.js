@@ -6,6 +6,14 @@ const QuestionSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
+    checkBoxStates: {
+      type: Array,
+      required: true
+    },
+    options: {
+      type: Array,
+      required: true
+    },
     quizId: {
         type: mongoose.Schema.Types.ObjectId, ref: 'Quiz',
     },

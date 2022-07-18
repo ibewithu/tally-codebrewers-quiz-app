@@ -12,4 +12,13 @@ router.post("/", async (req, res) => {
   }
 });
 
+//get quizzes by id
+router.get("/:id", async (req, res) => {
+  await Quiz.find({userId: req.params.id}, {userId: 0}, {new: true}).then(x=>{
+    res.status(200).json(x)
+  }).catch((err)=>{
+    res.status(500).json(err);
+  })
+})
+
 module.exports = router;
