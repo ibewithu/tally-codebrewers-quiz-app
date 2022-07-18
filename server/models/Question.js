@@ -2,13 +2,9 @@ const mongoose = require("mongoose");
 
 const QuestionSchema = new mongoose.Schema(
   {
-    question: {
+    questionText: {
       type: String,
       required: true,
-    },
-    checkBoxStates: {
-      type: Array,
-      required: true
     },
     options: {
       type: Array,
