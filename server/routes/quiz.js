@@ -3,7 +3,12 @@ const Quiz = require("../models/Quiz");
 
 //create quiz
 router.post("/", async (req, res) => {
-  const newQuiz = new Quiz({tiele: req.body.title, userId: req.body.userId})
+  const newQuiz = new Quiz({
+    title: req.body.title,
+    userId: req.body.userId,
+    startTime: req.body.startTime,
+    endTime: req.body.endTime
+  })
   try {
     const savedQuiz = await newQuiz.save()
     res.status(200).json(savedQuiz)
